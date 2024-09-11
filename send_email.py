@@ -1,8 +1,8 @@
 import os
 import smtplib
-from dotenv import load_dotenv
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -18,7 +18,7 @@ def send_email(body):
     msg = MIMEMultipart()
     msg['From'] = sender_email
     msg['To'] = sender_email
-    msg['Subject'] = 'News'
+    msg['Subject'] = "Today's news"
 
     msg.attach(MIMEText(body, 'plain'))
     # Connect to the SMTP server
